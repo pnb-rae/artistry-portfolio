@@ -35,6 +35,11 @@ header a {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header a:hover {
@@ -54,6 +59,7 @@ main {
 article {
     flex: 2;
     padding: 20px;
+    overflow-wrap: break-word;
 }
 
 aside {
@@ -67,12 +73,18 @@ aside {
 h1 {
     color: #1da1f2;
     margin-top: 0;
+    font-size: 2.2rem;
 }
 
 h2 {
     color: #333;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.4rem;
 }
 
 /* ===== Tweet Embed Styles ===== */
@@ -89,6 +101,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
 
 th, td {
@@ -110,16 +123,16 @@ tr:hover {
 footer {
     text-align: center;
     margin-top: 2rem;
-    padding: 1rem;
-    color: #666;
+    padding: 1.5rem;
+    color: white;
     font-size: 0.9rem;
     background-color: #333;
-    color: white;
 }
 
 footer a {
     color: #1da1f2;
     text-decoration: none;
+    padding: 5px;
 }
 
 footer a:hover {
@@ -133,10 +146,15 @@ img {
     display: block;
     margin: 1rem 0;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
     header ul {
         flex-direction: column;
         gap: 10px;
@@ -150,5 +168,26 @@ img {
     aside {
         margin-left: 0;
         margin-top: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+    
+    header a {
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 0.9rem;
     }
 }
