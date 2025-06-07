@@ -1,27 +1,152 @@
-/* styles.css - Additional specific styles */
+/* styles.css - Unique styling enhancements */
 
-/* Add any component-specific styles here */
-.special-button {
-    background-color: #1da1f2;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+/* ===== Logo Styles ===== */
+.logo {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #1da1f2;
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
 
-.special-button:hover {
-    background-color: #0d8ecf;
+.logo:hover {
+    transform: rotate(15deg) scale(1.1);
+    color: #0d8ecf;
 }
 
-/* Animation for interactive elements */
-a, button {
+/* ===== Article Enhancements ===== */
+article {
+    background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+}
+
+article h1 {
+    background: linear-gradient(to right, #1da1f2, #0d8ecf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+article h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #1da1f2;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    margin-top: 1.8rem;
+}
+
+article h3 {
+    color: #34495e;
+    margin-top: 1.5rem;
+}
+
+article p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.styled-link {
+    color: #1da1f2;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px dotted #1da1f2;
     transition: all 0.3s ease;
+    padding: 0.2rem 0;
 }
 
-/* Print styles */
+.styled-link:hover {
+    color: #0d8ecf;
+    border-bottom-style: solid;
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+/* ===== Table Enhancements ===== */
+.styled-table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.styled-table th {
+    background: linear-gradient(to right, #1da1f2, #0d8ecf);
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+}
+
+.styled-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.styled-table tr:hover {
+    background-color: #ebf5fb;
+}
+
+/* ===== Image Enhancements ===== */
+article img {
+    border: 3px solid #1da1f2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Aside Enhancements ===== */
+.aside-text {
+    font-style: italic;
+    color: #666;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #1da1f2;
+}
+
+/* ===== Footer Enhancements ===== */
+.footer-link {
+    color: #1da1f2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+.footer-link:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+    text-decoration: underline;
+}
+
+/* ===== Animation Effects ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+article {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* ===== Print Styles ===== */
 @media print {
     header, footer, aside {
         display: none;
@@ -36,5 +161,14 @@ a, button {
     main {
         box-shadow: none;
         padding: 0;
+    }
+    
+    article {
+        padding: 0;
+        border: none;
+    }
+    
+    .styled-table {
+        box-shadow: none;
     }
 }
