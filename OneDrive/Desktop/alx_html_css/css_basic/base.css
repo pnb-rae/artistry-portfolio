@@ -9,6 +9,9 @@ body {
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===== Header Styles ===== */
@@ -44,6 +47,21 @@ main {
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    display: flex;
+}
+
+article {
+    flex: 2;
+    padding: 20px;
+}
+
+aside {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-left: 20px;
 }
 
 h1 {
@@ -95,6 +113,8 @@ footer {
     padding: 1rem;
     color: #666;
     font-size: 0.9rem;
+    background-color: #333;
+    color: white;
 }
 
 footer a {
@@ -123,6 +143,12 @@ img {
     }
     
     main {
+        flex-direction: column;
         padding: 1rem;
+    }
+    
+    aside {
+        margin-left: 0;
+        margin-top: 20px;
     }
 }
