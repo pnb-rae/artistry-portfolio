@@ -1,14 +1,11 @@
 // Dynamic Gallery Loader
 const gallery = document.getElementById('image-gallery');
-const totalImages = 12; // Adjust based on your actual images
+const totalImages = 20; // Update with your image count
 
 for (let i = 1; i <= totalImages; i++) {
     const galleryItem = document.createElement('div');
     galleryItem.className = 'gallery-item';
-    galleryItem.innerHTML = `
-        <img src="images/ferri-style-${i}.jpg" alt="Artwork ${i} in Ferri's style">
-        <div class="art-title">Classic Study ${i}</div>
-    `;
+    galleryItem.innerHTML = `<img src="images/classic-art-${i}.jpg" alt="Classic Artwork ${i}">`;
     gallery.appendChild(galleryItem);
 }
 
@@ -29,6 +26,6 @@ document.querySelectorAll('nav a:not(.social-icon a)').forEach(link => {
 // Contact Form Submission
 document.getElementById('contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Commission request sent! I\'ll contact you soon.');
+    alert('Message sent! I\'ll respond soon.');
     e.target.reset();
 });
